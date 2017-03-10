@@ -1,0 +1,6 @@
+api:
+  build: ../api/
+  container_name: api
+measurement:
+  build: ../measurement/
+  container_name: measurement

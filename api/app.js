@@ -2,6 +2,7 @@ var SenecaWeb = require('seneca-web')
 var Express = require('express')
 var Router = Express.Router
 var context = new Router()
+var cors = require('cors');
 
 var senecaWebConfig = {
       context: context,
@@ -10,6 +11,7 @@ var senecaWebConfig = {
 }
 
 var app = Express()
+      .use(cors())
       .use( require('body-parser').urlencoded({ extended: false }) )
       .use( context )
       .listen(3000)
@@ -20,7 +22,7 @@ var seneca = require('seneca')()
       .use(SenecaWeb, senecaWebConfig )
       .use('api')
       .client({
-    type: "tcp",
-    port: 9001,
+    host: process.env.PROXY_HOST, 
+    port: process.env.measurement_PORT,
     pin: 'role:humiditySensorMeasuerement'
   })

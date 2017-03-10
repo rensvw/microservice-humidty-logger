@@ -10,6 +10,5 @@ seneca
     })
 
     .listen({
-        type: "tcp",
         port: 9001
     });

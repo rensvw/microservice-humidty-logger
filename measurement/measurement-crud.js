@@ -19,9 +19,9 @@ module.exports = function (options) {
     "role": "humiditySensorMeasuerement",
     "cmd": "getAll"
   }, (args, done) => {
-    let humiditySensorMeasuerement = this.make$("humiditySensorMeasuerement");
-    let limit = parseInt(args.limit) || 10;
-    let property = args.property || humiditySensorMeasuerement.creationTime;
+    var humiditySensorMeasuerement = this.make$("humiditySensorMeasuerement");
+    var limit = parseInt(args.limit) || 10;
+    var property = args.property || humiditySensorMeasuerement.creationTime;
     console.log(args)
     humiditySensorMeasuerement.list$({
       property: property, 

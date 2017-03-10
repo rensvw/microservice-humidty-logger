@@ -1,0 +1,6 @@
+
+> api@1.0.0 start C:\Users\rens.van.woudenberg\Desktop\microservice-humidty-logger\api
+> node app.js
+
+(node:2648) DeprecationWarning: 'root' is deprecated, use 'global'
+{"kind":"notice","notice":"hello seneca nsc9fccqec32/1489152562814/2648/3.3.0/-","level":"info","when":1489152563169}

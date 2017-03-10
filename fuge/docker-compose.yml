@@ -1,0 +1,25 @@
+version: '2'
+services:
+  api:
+    build: ../api/
+    container_name: api
+    environment:
+      - SERVICE_HOST=0.0.0.0
+      - SERVICE_PORT=3000
+      - api_PORT=3000
+      - measurement_PORT=9001
+    ports:
+      - 3000:3000
+  measurement:
+    build: ../measurement/
+    container_name: measurement
+    environment:
+      - SERVICE_HOST=0.0.0.0
+      - SERVICE_PORT=9001
+      - api_PORT=3000
+      - measurement_PORT=9001
+    ports:
+      - 9001:9001
+
+
+  

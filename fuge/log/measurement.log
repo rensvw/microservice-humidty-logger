@@ -1,0 +1,6 @@
+
+> getting-started-seneca@1.0.0 start C:\Users\rens.van.woudenberg\Desktop\microservice-humidty-logger\measurement
+> node measurement-service.js
+
+(node:9212) DeprecationWarning: 'root' is deprecated, use 'global'
+{"kind":"notice","notice":"hello seneca d3q5pslygmei/1489152562606/9212/3.3.0/-","level":"info","when":1489152563832}
